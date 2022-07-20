@@ -5,11 +5,13 @@ public class Instructor extends Person implements Teacher{
         super(id, name);
     }
 
-    public void teach(Learner learn, double numberOfHours) {
+    public void teach(Learner learner, double numberOfHours) {
+        learner.learn(numberOfHours);
 
     }
 
     public void lecture(Learner[] learners, double numberOfHours) {
         double numberOfHoursPerLearner = numberOfHours / learners.length;
+        learners[0].learn(numberOfHoursPerLearner);
     }
 }
