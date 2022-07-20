@@ -6,6 +6,7 @@ import java.util.List;
 
 public class People<E> implements Iterable {
     Person person;
+
     List<Person> personList = new ArrayList<Person>();
 
     public void addPerson(Person person){

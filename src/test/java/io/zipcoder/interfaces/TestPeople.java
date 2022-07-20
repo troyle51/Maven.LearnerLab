@@ -3,6 +3,9 @@ package io.zipcoder.interfaces;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestPeople {
     @Test
     public void testAdd(){
@@ -31,13 +34,11 @@ public class TestPeople {
 
     @Test
     public void testFindById(){
-        People people = new People();
-        people.addPerson(new Person(0, "Bob"));
-        Object expected = people.findById(0);
-        System.out.println(expected);
+        Person person = new Person(111, null);
+        long expected = 111;
 
-        Object actual = people.personList.get(0);
+        long actual = person.getId();
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 }
