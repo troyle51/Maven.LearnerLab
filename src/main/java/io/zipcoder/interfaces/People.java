@@ -1,23 +1,24 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class People implements Iterable {
-    long id;
-    List<Person> personList;
+public class People<E> implements Iterable {
+    Person person;
+    List<Person> personList = new ArrayList<Person>();
 
     public void addPerson(Person person){
         personList.add(person);
     }
 
-    public Person findById(long id){
+    public Long findById(long id){
         //Person person = personList.contains(id);
-        return null;
+        return person.getId();
     }
-    public Person removeById(long id){
+    public void removeById(long id){
         //Person person = personList.contains(id);
-        return null;
+        personList.remove(id);
     }
 
     public boolean contains(Person person){
